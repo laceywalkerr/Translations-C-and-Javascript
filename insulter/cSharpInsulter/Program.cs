@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Insulter
 {
@@ -17,17 +19,17 @@ namespace Insulter
                 "Do you have to be so...like that?"
             };
 
-            string indexes = "";
-            while (indexes.length < 3)
+            List<int> indexes = new List<int>();
+            while (!indexes.count < 3)
             {
-                string canditade = getRandomInt(0, insults.length - 1);
-                if (!indexes.includes(candidate))
+                int candidate = new Random().Next(0, insults.Count - 1);
+                if (!indexes.Contains(candidate))
                 {
-                    indexes.push(candidate);
+                    indexes.Add(candidate);
                 }
-                for (int i = 0; i < indexes.length; i++)
+                for (int i = 0; i < indexes.Count; i++)
                 {
-                    string index = indexes(i);
+                    int index = indexes[i];
                     Console.WriteLine(insults[index]);
                 }
             }
