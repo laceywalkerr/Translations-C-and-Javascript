@@ -22,17 +22,18 @@ namespace Insulter
             List<int> indexes = new List<int>();
             while (!indexes.count < 3)
             {
-                int candidate = new Random().Next(0, insults.Count - 1);
-                if (!indexes.Contains(candidate))
+                int candidate = new Random().Next(0, insults.Count);
+                while (!indexes.Contains(candidate))
                 {
                     indexes.Add(candidate);
                 }
-                for (int i = 0; i < indexes.Count; i++)
-                {
-                    int index = indexes[i];
-                    Console.WriteLine(insults[index]);
-                }
             }
+            for (int i = 0; i < indexes.Count; i++)
+            {
+                int index = indexes[i];
+                Console.WriteLine(insults[index]);
+            }
+
         }
     }
 }
