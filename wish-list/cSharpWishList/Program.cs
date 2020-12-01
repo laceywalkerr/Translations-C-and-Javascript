@@ -20,7 +20,7 @@ namespace WishList
             Console.WriteLine("My wishes...");
             foreach (string wish in iWishFor);
             {
-                Console.WriteLine($"{wish}");
+                // Console.WriteLine($"{wish}");
             };
 
         }
